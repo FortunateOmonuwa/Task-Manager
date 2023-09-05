@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+* a {
+  color: white;
+  text-decoration: none;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(229, 229, 229);
+}
+#root .container {
+  background-color: rgb(40, 45, 53);
+  padding-inline: 1.4em;
+  padding-block: 1.2em;
+  width: max(35%, 30em);
+}
+#root .container .nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(37, 38, 47) !important;
+  padding-block: 0px 1.2em;
+}
+#root .container .nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+#root .container .nav .logo span {
+  color: rgb(97, 218, 251);
+  font-weight: 700;
+  font-size: 1.2em;
+}
+#root .container .nav .course {
+  color: rgb(222, 235, 248);
+  font-size: 0.8em;
+  font-weight: 800;
+}
+#root .container .section {
+  padding-block: 1em 3em;
+}
+#root .container .section .h1 {
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+}
+#root .container .section .list {
+  width: 25em;
+}
+#root .container .section .list li {
+  color: rgb(222, 235, 248);
+  padding-block: 0.3em;
+}
+#root .container .section .list li::marker {
+  color: rgb(97, 218, 251);
+  font-size: 1.5em;
+}/*# sourceMappingURL=style.css.map */

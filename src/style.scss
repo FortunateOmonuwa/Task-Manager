@@ -1,0 +1,73 @@
+* {
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    box-sizing: border-box;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(229, 229, 229);
+
+
+    .container {
+        background-color: rgb(40, 45, 53);
+        padding-inline: 1.4em;
+        padding-block: 1.2em;
+        width: max(35%, 30em);
+
+        .nav {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(37, 38, 47) !important;
+            padding-block: 0px 1.2em;
+
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5em;
+
+                span {
+                    color: rgb(97, 218, 251);
+                    font-weight: 700;
+                    font-size: 1.2em;
+                }
+            }
+
+            .course {
+                color: rgb(222, 235, 248);
+                font-size: 0.8em;
+                font-weight: 800;
+            }
+        }
+
+        .section {
+            padding-block: 1em 3em;
+            .h1 {
+                color: rgb(255, 255, 255);
+                font-size: 2em;
+            }
+
+            .list{
+                width: 25em;
+                li{
+                    color: rgb(222, 235, 248); 
+                    padding-block: 0.3em;
+
+                    &::marker{
+                        color:  rgb(97, 218, 251);
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}
