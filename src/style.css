@@ -54,14 +54,27 @@
 .todoitem h1 {
   color: rgb(255, 238, 246);
 }
+.todoitem p {
+  color: rgb(230, 206, 220);
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.todoitem p span {
+  color: rgb(241, 72, 72);
+  font-size: 1.22em;
+}
 .todoitem .items {
   display: flex;
   align-items: center;
   gap: 0.4em;
+  width: 100%;
+  overflow: hidden;
 }
 .todoitem .items label {
   color: white;
   text-transform: uppercase;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 .todoitem .items button {
   padding: 5px 10px;
@@ -75,12 +88,17 @@
   display: flex;
   align-items: center;
   gap: 0.4em;
+  width: 100%;
+  overflow: hidden;
 }
 .todoitem .checked label {
   color: white;
   text-transform: uppercase;
   opacity: 0.3;
   text-decoration: line-through;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-align: center;
 }
 .todoitem .checked button {
   padding: 5px 10px;
