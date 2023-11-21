@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-const Form = () => {
+const Form = ({ addItem }) => {
   const [item, setItem] = useState({
-    id: crypto.randomUUID(),
+    id: Date.now(),
     todoItem: "",
     completed: false,
   });
@@ -19,7 +19,17 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setItem({ id: "", todoItem: "", completed: "" });
+    if (item.todoItem !== "") {
+      const { id, todoItem, completed } = item;
+      const newItem = {
+        id,
+        todoItem,
+        completed,
+      };
+      console.log(newItem);
+      addItem(newItem);
+      setItem({ todoItem: "" });
+    }
   };
 
   return (

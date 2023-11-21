@@ -6,12 +6,16 @@ import TodoItems from "./List";
 //import Main from './assets/Projects/ReactFacts/Main'
 
 function App() {
+  const [addedItem, setAddedItem] = useState([]);
+  const addItem = (item) => {
+    setAddedItem((prev) => [...prev, item]);
+  };
   return (
     <>
       {/* <Page/> */}
       {/* <Main/> */}
-      <Form />
-      <TodoItems />
+      <Form addItem={addItem} />
+      <TodoItems addedItem={addedItem} />
     </>
   );
 }
