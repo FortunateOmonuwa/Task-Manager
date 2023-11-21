@@ -10,12 +10,17 @@ function App() {
   const addItem = (item) => {
     setAddedItem((prev) => [...prev, item]);
   };
+
+  const removeItem = (id) => {
+    console.log(id);
+    setAddedItem((items) => items.filter((item) => item.id !== id));
+  };
   return (
     <>
       {/* <Page/> */}
       {/* <Main/> */}
       <Form addItem={addItem} />
-      <TodoItems addedItem={addedItem} />
+      <TodoItems addedItem={addedItem} removeItem={removeItem} />
     </>
   );
 }

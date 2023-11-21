@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const Form = ({ addItem }) => {
   const [item, setItem] = useState({
-    id: Date.now(),
     todoItem: "",
     completed: false,
   });
@@ -20,15 +19,15 @@ const Form = ({ addItem }) => {
     e.preventDefault();
 
     if (item.todoItem !== "") {
-      const { id, todoItem, completed } = item;
+      const { todoItem, completed } = item;
       const newItem = {
-        id,
+        id: crypto.randomUUID(),
         todoItem,
         completed,
       };
       console.log(newItem);
       addItem(newItem);
-      setItem({ todoItem: "" });
+      setItem({ todoItem: "", completed: false });
     }
   };
 

@@ -136,12 +136,12 @@
         display: flex;
         align-items: center;
         gap: 0.4em;
-        opacity: 0.4;
-        text-decoration: line-through;
 
         label {
             color: white;
             text-transform: uppercase;
+            opacity: 0.3;
+            text-decoration: line-through;
         }
         button {
             padding: 5px 10px;

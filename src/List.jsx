@@ -1,9 +1,10 @@
 import Items from "./Items";
 
-const TodoItems = ({ addedItem }) => {
+const TodoItems = ({ addedItem, removeItem }) => {
   const items = addedItem.map((item) => {
-    return <Items key={addedItem.id} {...item} />;
+    return <Items key={addedItem.id} {...item} removeItem={removeItem} />;
   });
+
   return (
     <div className="todoitem">
       <h1>Todo List</h1>

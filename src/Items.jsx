@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-const Items = ({ todoItem, completed }) => {
+const Items = ({ todoItem, completed, id, removeItem }) => {
   const [checked, setCheck] = useState(completed);
 
   function handleCheck() {
     setCheck((prev) => !prev);
   }
   return (
-    <div className={checked ? "checked" : "items"}>
+    <div key={id} id={id} className={checked ? "checked" : "items"}>
       <input
         type="checkbox"
         name=""
@@ -16,7 +16,9 @@ const Items = ({ todoItem, completed }) => {
         onClick={handleCheck}
       />
       <label htmlFor="checkbox">{todoItem}</label>
-      <button type="danger">Delete</button>
+      <button type="danger" onClick={() => removeItem(id)}>
+        Delete
+      </button>
     </div>
   );
 };
